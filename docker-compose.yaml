@@ -1,0 +1,8 @@
+version: "2"
+services:
+  app:
+    image: golang:1.15-alpine
+    volumes:
+      - .:/go/src/sorting
+    working_dir: /go/src/sorting
+    command: go test -v ./...
